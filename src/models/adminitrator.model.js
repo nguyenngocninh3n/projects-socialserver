@@ -7,6 +7,6 @@ const adminitratorModel = new Schema({
    admin: {type: memberItem},
    censor: {type: [memberItem]}
 
-} {timestamps:true})
+}, {timestamps:true})
 
 module.exports = mongoose.model('Group', adminitratorModel)

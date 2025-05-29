@@ -6,6 +6,6 @@ const memberItem = new Schema({
     userName: {type: String},
     avatar: {type: String, default: null},
 
-} {timestamps:true})
+}, {timestamps:true})
 
 module.exports = memberItem

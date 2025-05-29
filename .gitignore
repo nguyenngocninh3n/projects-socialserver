@@ -21,7 +21,7 @@
 .env.production.local
 .env
 
-/src/config/firebase-admin-account-key.json
+# /src/config/firebase-admin-account-key.json
 /src/visionapi.json
 npm-debug.log*
 yarn-debug.log*
