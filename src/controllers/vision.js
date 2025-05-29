@@ -1,14 +1,9 @@
-const dotenv = require('dotenv')
+
 const fs = require('fs')
 const vision = require('@google-cloud/vision')
 const ffmpeg = require('fluent-ffmpeg')
 const path = require('path')
 
-const result = dotenv.config()
-if (result.error) {
-  console.error('Error loading .env file', result.error)
-  process.exit(1)
-}
 
 const client = new vision.ImageAnnotatorClient()
 

@@ -9,4 +9,4 @@ const adminitratorModel = new Schema({
 
 }, {timestamps:true})
 
-module.exports = mongoose.model('Group', adminitratorModel)
+module.exports = mongoose.model('Administrator', adminitratorModel)
