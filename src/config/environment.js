@@ -1,0 +1,18 @@
+import dotenv from 'dotenv/config'
+const environment = {
+  DATABASE_CONNECTION_STRING: process.env.DATABASE_CONNECTION_STRING,
+  DATABASE_APPNAME: process.env.DATABASE_APPNAME,
+
+
+  
+CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+CLOUDINARY_API_SECRET:  process.env.CLOUDINARY_API_SECRET,
+
+  CHATGPT_API_KEY: process.env.CHATGPT_API_KEY,
+  AVATAR_GROUP_CONVENTION_PATH: process.env.AVATAR_GROUP_CONVENTION_PATH,
+  AVATAR_GROUP_PATH: process.env.AVATAR_GROUP_PATH,
+  BUILD_MODE: 'dev',
+}
+
+export const env = environment
