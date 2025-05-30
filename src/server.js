@@ -11,6 +11,7 @@ import SocketServer from './socket'
 import { HOST, PORT } from './utils/constants'
 // import { v1Router } from './routes/v1'
 import router from './routes'
+import { env } from './config/environment'
 
 const app = express()
 app.use(cors())
@@ -27,10 +28,19 @@ const socketServerInstance = new Server(httpServer, { cors: {} })
 SocketServer.runSocketServer(httpServer)
 app.use(router)
 
+
 firebaseAdmin.initializeApp({
   credential: firebaseAdmin.credential.cert(serviceAccount)
 })
 
-httpServer.listen(PORT, HOST, async () => {
-  console.log(`Server is running on: http://${HOST}:${PORT}`)
-})
+if(env.BUILD_MODE === 'dev') {
+  httpServer.listen(PORT, HOST, async () => {
+    console.log(`Server is running on: http://${HOST}:${PORT}`)
+  })
+  
+} else {
+  httpServer.listen(PORT, async () => {
+    console.log(`Server is running on: http://${PORT}`)
+  })
+  
+}
